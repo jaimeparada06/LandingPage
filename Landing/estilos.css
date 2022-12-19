@@ -156,8 +156,128 @@ body{
     margin-bottom: 10px;
   }
 
+  .distribucionTarjetas{
+    display: flex;
+    padding-left: 400px;
+    margin-right: 10px;
+  }
+
+  .distribucionTarjetas2{
+    padding-top: 2s0px;
+    display: flex;
+    padding-left: 400px;
+    margin-right: 10px;
+  }
+
   .imagen{
     padding-left: 20px;
-    padding-right: 120px;
-    padding-top: 90px;
+    padding-right: 60px;
   }
+
+  /*TARJETAS*/
+
+h4{
+    font-size: 20px;
+    color: white;
+}
+
+.container__card{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+    perspective: 1000px;
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card__father{
+    margin: 20px;
+    perspective: 100%;
+}
+
+.card__father:hover .card{
+    transform: rotateY(180deg);
+}
+
+
+.card{
+    width: 300px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card__front{
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card__front,
+.card__back{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    background-image: url(cap.png);
+}
+
+.body__card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.body__card_back{
+    padding: 20px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body__card_back p{
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+}
+
+.body__card_back input{
+    padding: 10px 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: black;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body__card_back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
